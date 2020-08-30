@@ -9,6 +9,7 @@ const forecast = require('./utils/forecast');
 const geoCode = require('./utils/geoCode');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // console.log(__dirname);
 // console.log(__filename);
@@ -141,6 +142,6 @@ app.get('*', (request, response) => {
     })
 });
 
-app.listen(3000, () => {
-    console.log('starting web server at port # 3000')
+app.listen(port, () => {
+    console.log('starting web server at port # '+port)
 });
